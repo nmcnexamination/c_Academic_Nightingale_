@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Optimized viewport for mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+  <title>Academic Nightingale</title>
+  <!-- Font Awesome for social media icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    /* Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    body {
+      min-height: 100vh;
+      /* Background image optimized for mobile */
+      background: url('https://i.imghippo.com/files/ewpH4935jM.jpg') center/cover no-repeat;
+      background-attachment: fixed; /* Optional: keeps background stable on scroll */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow-x: hidden; /* Prevent horizontal scroll */
+    }
+    .welcome-container {
+      background: rgba(0, 139, 139, 0.8);
+      backdrop-filter: blur(1px);
+      padding: 5vw; /* Responsive padding */
+      border-radius: 20px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      position: relative;
+      width: 90%; /* Flexible width */
+      max-width: 400px; /* Max width for larger screens */
+      transition: all 0.3s ease;
+    }
+    .welcome-container:hover {
+      transform: translateY(-5px);
+    }
+    h1 {
+      color: white;
+      font-size: clamp(2em, 6vw, 3em); /* Responsive font size */
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .btn-login {
+      background: rgba(255, 255, 255, 0.2);
+      border: none;
+      padding: clamp(10px, 3vw, 15px) clamp(25px, 8vw, 40px); /* Responsive padding */
+      color: white;
+      font-size: clamp(0.9em, 2.5vw, 1.1em); /* Responsive font size */
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(5px);
+    }
+    .btn-login:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: scale(1.05);
+    }
+    .social-login {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 10px; /* Better spacing for mobile */
+    }
+    .social-btn {
+      background: rgba(255, 255, 255, 0.2);
+      border: none;
+      padding: clamp(6px, 2vw, 10px); /* Responsive padding */
+      border-radius: 50%;
+      color: white;
+      font-size: clamp(0.9em, 2.5vw, 1.2em); /* Responsive icon size */
+      cursor: pointer;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(5px);
+    }
+    .social-btn:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: scale(1.1);
+    }
+    /* Enhanced Media Queries for Mobile */
+    @media (max-width: 768px) {
+      .welcome-container {
+        padding: 4vw;
+        width: 85%;
+      }
+      h1 {
+        font-size: clamp(1.8em, 5vw, 2.5em);
+      }
+      .btn-login {
+        padding: clamp(8px, 2.5vw, 12px) clamp(20px, 6vw, 30px);
+        font-size: clamp(0.85em, 2vw, 1em);
+      }
+      .social-btn {
+        padding: clamp(5px, 1.5vw, 8px);
+        font-size: clamp(0.85em, 2vw, 1em);
+      }
+    }
+    @media (max-width: 480px) {
+      .welcome-container {
+        padding: 3vw;
+        width: 90%;
+      }
+      h1 {
+        font-size: clamp(1.5em, 4.5vw, 2em);
+      }
+      .btn-login {
+        padding: clamp(6px, 2vw, 10px) clamp(15px, 5vw, 25px);
+        font-size: clamp(0.8em, 1.8vw, 0.9em);
+      }
+      .social-login {
+        gap: 8px;
+      }
+      .social-btn {
+        padding: clamp(4px, 1.2vw, 6px);
+        font-size: clamp(0.8em, 1.8vw, 0.9em);
+      }
+    }
+    /* Extra small screens (e.g., very narrow phones) */
+    @media (max-width: 320px) {
+      .welcome-container {
+        padding: 2vw;
+        width: 95%;
+      }
+      h1 {
+        font-size: clamp(1.2em, 4vw, 1.5em);
+      }
+      .btn-login {
+        padding: clamp(5px, 1.8vw, 8px) clamp(12px, 4vw, 20px);
+        font-size: clamp(0.7em, 1.5vw, 0.8em);
+      }
+      .social-btn {
+        padding: clamp(3px, 1vw, 5px);
+        font-size: clamp(0.7em, 1.5vw, 0.8em);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="welcome-container">
+    <h1>Welcome</h1>
+    <button class="btn-login" onclick="window.location.href='https://script.google.com/macros/s/AKfycbwozy0vWXaBkJ3vnRwN-mou0kHBjFDJy1evMnM1CQuTMOT6iVDdtYdmWGkC1RiCLuZc/exec'">Get Started</button>
+    <!-- Social media buttons -->
+    <div class="social-login">
+      <!-- Telegram -->
+      <a href="https://t.me/nmcnexam" target="_blank" style="text-decoration: none;">
+        <button class="social-btn">
+          <i class="fab fa-telegram-plane"></i>
+        </button>
+      </a>
+      <!-- Email -->
+      <a href="mailto:Nightingaleacademic@gmail.com" target="_blank" style="text-decoration: none;">
+        <button class="social-btn">
+          <i class="fas fa-envelope"></i>
+        </button>
+      </a>
+      <!-- Twitter -->
+      <a href="https://x.com/Academicnight?t=qL5UOGYAlOWFZp5tkHcKAg&s=09" target="_blank" style="text-decoration: none;">
+        <button class="social-btn">
+          <i class="fab fa-twitter"></i>
+        </button>
+      </a>
+      <!-- WhatsApp -->
+      <a href="https://whatsapp.com/channel/0029VaW2i4qJuyAIGj7CRb0W" target="_blank" style="text-decoration: none;">
+        <button class="social-btn">
+          <i class="fab fa-whatsapp"></i>
+        </button>
+      </a>
+    </div>
+  </div>
+</body>
+</html>
